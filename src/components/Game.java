@@ -6,13 +6,15 @@ import javax.xml.crypto.Data;
 
 public class Game {
     
+    private String name;
     private UUID id;
     private Player player;
     private Data time; //Da modificare
     private int day;
     private float level;
 
-    public Game(Player player, Data time, int day, float level) {
+    public Game(String name, Player player, Data time, int day, float level) {
+        this.name = name;
         id = UUID.randomUUID();
         this.player = player;
         this.time = time;
@@ -20,6 +22,13 @@ public class Game {
         this.level = level;
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     public UUID getId() {
         return id;
     }
@@ -60,5 +69,9 @@ public class Game {
         this.level = level;
     }
     
-    
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return "Game name: " + name + ", id_game: " + id + ", player: " + player.getName() + ", day: " + day;
+    }
 }

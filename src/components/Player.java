@@ -11,16 +11,14 @@ public class Player {
 
     public Player() {
         name = "Ciro";
-        hunger = 0;
-        thirst = 0;
-        objects.clear();
+        hunger = 100;
+        thirst = 100;
     }
 
     public Player(String name, float hunger, float thirst) {
         this.name = name;
         this.hunger = hunger;
         this.thirst =  thirst;
-        objects.clear();
     }
 
     public String getName() {
@@ -50,8 +48,14 @@ public class Player {
     public ArrayList getObjects() {
         return objects;
     }
-    
+
     public void setObjects(ArrayList objects) {
         this.objects = objects;
+    }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return "Name: " + name + ", hunger: " + hunger + ", thirst: " + thirst + ", Objects: " + objects;
     }
 }

@@ -75,4 +75,9 @@ public class Object {
         this.durability = durability;
     }
 
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return "name: " + name + ", description: " + description + ", quantity" + quantity + ", Consumable: " + consumable + ", rarity: " + rarity + ", durability: " + durability;
+    }
 }
